@@ -7819,4 +7819,34 @@ tinymce.ScriptLoader.markDone( 'https://meukatalogo.com/wp-includes/js/tinymce/l
 
 
 
-<img src="./wagner_files/g.gif" alt="" width="6" height="5" id="wpstats"><p id="a11y-speak-intro-text" class="a11y-speak-intro-text" style="position:absolute;margin:-1px;padding:0;height:1px;width:1px;overflow:hidden;clip-path:inset(50%);border:0;word-wrap:normal !important;" hidden="">Notificações</p><div id="a11y-speak-assertive" class="a11y-speak-region" style="position:absolute;margin:-1px;padding:0;height:1px;width:1px;overflow:hidden;clip-path:inset(50%);border:0;word-wrap:normal !important;" aria-live="assertive" aria-relevant="additions text" aria-atomic="true"></div><div id="a11y-speak-polite" class="a11y-speak-region" style="position:absolute;margin:-1px;padding:0;height:1px;width:1px;overflow:hidden;clip-path:inset(50%);border:0;word-wrap:normal !important;" aria-live="polite" aria-relevant="additions text" aria-atomic="true"></div><script src="./wagner_files/dialog.min.js"></script><div class="widget_shopping_cart_live_region screen-reader-text" role="status"></div></body></html>
+<img src="./wagner_files/g.gif" alt="" width="6" height="5" id="wpstats"><p id="a11y-speak-intro-text" class="a11y-speak-intro-text" style="position:absolute;margin:-1px;padding:0;height:1px;width:1px;overflow:hidden;clip-path:inset(50%);border:0;word-wrap:normal !important;" hidden="">Notificações</p><div id="a11y-speak-assertive" class="a11y-speak-region" style="position:absolute;margin:-1px;padding:0;height:1px;width:1px;overflow:hidden;clip-path:inset(50%);border:0;word-wrap:normal !important;" aria-live="assertive" aria-relevant="additions text" aria-atomic="true"></div><div id="a11y-speak-polite" class="a11y-speak-region" style="position:absolute;margin:-1px;padding:0;height:1px;width:1px;overflow:hidden;clip-path:inset(50%);border:0;word-wrap:normal !important;" aria-live="polite" aria-relevant="additions text" aria-atomic="true"></div><script src="./wagner_files/dialog.min.js"></script><div class="widget_shopping_cart_live_region screen-reader-text" role="status"></div><script>
+(function trySlick() {
+  if (typeof jQuery === 'undefined' || !jQuery.fn.slick) {
+    return setTimeout(trySlick, 300);
+  }
+  jQuery('.jet-listing-grid__items').each(function() {
+    var $grid = jQuery(this);
+    if ($grid.hasClass('slick-initialized')) {
+      $grid.slick('unslick');
+    }
+    var $widget = $grid.closest('[data-element_type]');
+    var raw = $widget.attr('data-settings') || '{}';
+    try { var s = JSON.parse(raw.replace(/&quot;/g,'"')); } catch(e) { var s = {}; }
+    var cols = parseInt(s.columns) || 10;
+    var scroll = parseInt(s.slides_to_scroll) || 4;
+    $grid.slick({
+      slidesToShow: cols,
+      slidesToScroll: scroll,
+      arrows: true,
+      prevArrow: $widget.find('.prev-arrow'),
+      nextArrow: $widget.find('.next-arrow'),
+      autoplay: s.autoplay === 'true',
+      autoplaySpeed: parseInt(s.autoplay_speed) || 5000,
+      infinite: s.infinite === 'true',
+      speed: parseInt(s.speed) || 500,
+      responsive: [{breakpoint: 768, settings: {slidesToShow: 4, slidesToScroll: 2}}]
+    });
+  });
+})();
+</script>
+</body></html>

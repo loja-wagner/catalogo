@@ -4143,29 +4143,17 @@ tinymce.ScriptLoader.markDone( 'https://meukatalogo.com/wp-includes/js/tinymce/l
 </style>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('[id^="shields-swiper-"]').forEach(function(swiper) {
-    var wrap = swiper.closest('.shields-wrap') || swiper.parentElement;
+  document.querySelectorAll('[id^="shields-swiper-"]').forEach(function(el) {
+    var wrap = el.closest('.shields-wrap') || el.parentElement;
     var prev = wrap ? wrap.querySelector('.shields-prev') : null;
     var next = wrap ? wrap.querySelector('.shields-next') : null;
-    if (!prev || !next) return;
-    new Swiper(swiper, {
+    var s = new Swiper(el, {
       slidesPerView: 'auto',
       spaceBetween: 8,
-      grabCursor: true,
-      navigation: { prevEl: prev, nextEl: next }
+      grabCursor: true
     });
-  });
-  // dummy to replace old forEach
-    var swiper = document.getElementById('shields-swiper-' + i);
-    var prev   = document.getElementById('shields-prev-' + i);
-    var next   = document.getElementById('shields-next-' + i);
-    if (!swiper || !prev || !next) return;
-    new Swiper(swiper, {
-      slidesPerView: 'auto',
-      spaceBetween: 8,
-      grabCursor: true,
-      navigation: { prevEl: prev, nextEl: next }
-    });
+    if (prev) prev.addEventListener('click', function() { s.slidePrev(300); });
+    if (next) next.addEventListener('click', function() { s.slideNext(300); });
   });
 });
 </script>

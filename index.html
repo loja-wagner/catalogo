@@ -4127,8 +4127,8 @@ tinymce.ScriptLoader.markDone( 'https://meukatalogo.com/wp-includes/js/tinymce/l
 document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('.elementor-widget-jet-listing-grid').forEach(function(widget, i) {
     var container = widget.querySelector('.swiper');
-    var prev = widget.querySelector('.prev-arrow');
-    var next = widget.querySelector('.next-arrow');
+    var prev = widget.querySelector('.elementor-swiper-button-prev');
+    var next = widget.querySelector('.elementor-swiper-button-next');
     if (!container || !prev || !next) return;
     new Swiper(container, {
       slidesPerView: 'auto',

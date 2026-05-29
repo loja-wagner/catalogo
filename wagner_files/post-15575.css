@@ -1,0 +1,15 @@
+.elementor-15575 .elementor-element.elementor-element-2ea142f{--display:flex;--flex-direction:column;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;--gap:10px 0px;--row-gap:10px;--column-gap:0px;border-style:none;--border-style:none;--padding-top:0px;--padding-bottom:0px;--padding-left:0px;--padding-right:0px;}.elementor-15575 .elementor-element.elementor-element-6c9dec0{--display:flex;border-style:solid;--border-style:solid;border-width:2px 2px 2px 2px;--border-top-width:2px;--border-right-width:2px;--border-bottom-width:2px;--border-left-width:2px;border-color:#FFFFFF;--border-color:#FFFFFF;--border-radius:1000px 1000px 1000px 1000px;--padding-top:20px;--padding-bottom:20px;--padding-left:20px;--padding-right:20px;}.elementor-widget-image .widget-image-caption{color:var( --e-global-color-text );font-family:var( --e-global-typography-text-font-family ), Sans-serif;font-weight:var( --e-global-typography-text-font-weight );}.elementor-15575 .elementor-element.elementor-element-721a815{padding:0px 0px 0px 0px;border-style:none;}.elementor-15575 .elementor-element.elementor-element-721a815 img{border-style:none;}.elementor-widget-heading .elementor-heading-title{font-family:var( --e-global-typography-primary-font-family ), Sans-serif;font-weight:var( --e-global-typography-primary-font-weight );color:var( --e-global-color-primary );}.elementor-15575 .elementor-element.elementor-element-40933d0{text-align:center;}.elementor-15575 .elementor-element.elementor-element-40933d0 .elementor-heading-title{font-family:"Futura", Sans-serif;font-size:18px;font-weight:500;color:#FFFFFF;}.jet-listing-item.single-jet-engine.elementor-page-15575 > .elementor{width:150px;margin-left:auto;margin-right:auto;}@media(min-width:1800px){.elementor-15575 .elementor-element.elementor-element-40933d0 .elementor-heading-title{font-size:18px;}}@media(max-width:767px){.elementor-15575 .elementor-element.elementor-element-6c9dec0{border-width:1px 1px 1px 1px;--border-top-width:1px;--border-right-width:1px;--border-bottom-width:1px;--border-left-width:1px;--padding-top:5px;--padding-bottom:5px;--padding-left:5px;--padding-right:5px;}.elementor-15575 .elementor-element.elementor-element-721a815{padding:5px 5px 5px 5px;}.elementor-15575 .elementor-element.elementor-element-40933d0 .elementor-heading-title{font-size:16px;}}/* Start Custom Fonts CSS */@font-face {
+	font-family: 'Futura';
+	font-style: normal;
+	font-weight: bold;
+	font-display: auto;
+	src: url('https://meukatalogo.com/wp-content/uploads/2024/07/Futura-Bold-font.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Futura';
+	font-style: italic;
+	font-weight: bold;
+	font-display: auto;
+	src: url('https://meukatalogo.com/wp-content/uploads/2024/07/Futura-Bold-Italic-font.ttf') format('truetype');
+}
+/* End Custom Fonts CSS */

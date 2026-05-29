@@ -4123,16 +4123,34 @@ tinymce.ScriptLoader.markDone( 'https://meukatalogo.com/wp-includes/js/tinymce/l
   display:block;
 }
 </style>
+<style>
+[id^="shields-prev-"], [id^="shields-next-"] {
+  display:flex !important;
+  align-items:center;
+  justify-content:center;
+  width:36px;
+  height:36px;
+  background:rgba(0,0,0,0.5);
+  border-radius:50%;
+  cursor:pointer;
+  z-index:20;
+  position:relative;
+  flex-shrink:0;
+}
+[id^="shields-prev-"] svg, [id^="shields-next-"] svg {
+  width:18px; height:18px; fill:white;
+}
+</style>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('.elementor-widget-jet-listing-grid').forEach(function(widget, i) {
-    var container = widget.querySelector('.swiper');
-    var prev = widget.querySelector('.elementor-swiper-button-prev');
-    var next = widget.querySelector('.elementor-swiper-button-next');
-    if (!container || !prev || !next) return;
-    new Swiper(container, {
+    var swiper = document.getElementById('shields-swiper-' + i);
+    var prev   = document.getElementById('shields-prev-' + i);
+    var next   = document.getElementById('shields-next-' + i);
+    if (!swiper || !prev || !next) return;
+    new Swiper(swiper, {
       slidesPerView: 'auto',
-      spaceBetween: 6,
+      spaceBetween: 8,
       grabCursor: true,
       navigation: { prevEl: prev, nextEl: next }
     });
